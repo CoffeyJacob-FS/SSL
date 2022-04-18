@@ -1,0 +1,1 @@
+print "please enter students name:"
