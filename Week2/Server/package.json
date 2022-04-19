@@ -1,0 +1,30 @@
+{
+  "name": "ssl-example-server",
+  "version": "1.0.0",
+  "description": "example server for ssl",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CoffeyJacob-FS/SSL.git"
+  },
+  "keywords": [
+    "satic",
+    "web"
+  ],
+  "author": "Jake Coffey",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CoffeyJacob-FS/SSL/issues"
+  },
+  "homepage": "https://github.com/CoffeyJacob-FS/SSL#readme",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
