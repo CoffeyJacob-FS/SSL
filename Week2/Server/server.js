@@ -6,19 +6,16 @@ app.use(express.static(__dirname));
 
 //handles all page requests
 app.get('/',(req,res)=>{
-    res.sendFile(__dirname + 'index.html');
+    res.sendFile(__dirname + '/index');
 });
 app.get('/about',(req,res)=>{
-    res.sendFile(__dirname + 'about.html');
-});
-app.get('/home',(req,res)=>{
-    res.sendFile(__dirname + 'home.html');
+    res.sendFile(__dirname + '/about');
 });
 app.get('/contact',(req,res)=>{
-    res.sendFile(__dirname + 'contact.html');
+    res.sendFile(__dirname + '/contact');
 });
 app.get('/post',(req,res)=>{
-    res.sendFile(__dirname + 'post.html');
+    res.sendFile(__dirname + '/post');
 });
 
 http.createServer(app).listen(8085,()=>{

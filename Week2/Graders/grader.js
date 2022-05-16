@@ -1,4 +1,4 @@
-//Simple grader by jake coffey 4/17/22 
+//Simple grader by jake coffey 5/15/22 
 const readline = require('readline').createInterface({
     input: process.stdin,
     output: process.stdout

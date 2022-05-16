@@ -1,4 +1,5 @@
 #Simple grader by jake coffey 4/17/22 
+class Grades
 print 'What is the students name?'
 name = gets.chomp
 loop= true
@@ -24,7 +25,9 @@ elsif grade>=70 and grade <80
 elsif grade>=80 and grade<90 
     print "#{name} got a B :)"
 
-elsif grade>=90 and grade<100 
+elsif grade>=90 and grade<=100 
     print "#{name} got an A  :)!"
 end
 end
+end
+grades = Grades.new

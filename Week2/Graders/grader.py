@@ -1,12 +1,13 @@
 #Must be run in python 3!
-#Simple grader by jake coffey 4/17/22 
-student= input("please enter students name:")
+#Simple grader by jake coffey 5/15/22 
+
+student= input("please enter the students name:")
 loop = True
 while(loop):
     strGrade=input(f' please input {student}s grade:')
     intGrade= float(strGrade)
     if intGrade>100 or intGrade<0 :
-        print ("Grade must be between 0 and 100!")
+        print ("Grades must be between 0 and 100!")
     
     else:
         loop=False
