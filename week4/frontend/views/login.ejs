@@ -20,6 +20,8 @@
     <body>
         <%-include('includes/nav')%>
         <header class="masthead" style="background-image: url('img/home-bg.jpg')">
+            
+
             <div class="container position-relative px-4 px-lg-5">
                 <div class="row gx-4 gx-lg-5 justify-content-center">
                     <div class="col-md-10 col-lg-8 col-xl-7">
@@ -35,6 +37,12 @@
             <div class="row gx-4 gx-lg-5 justify-content-center">
                 <div class="col-md-10 col-lg-8 col-xl-7">
                     <p>Fill out the form to get signed up!</p>
+                    <% if (typeof(message) != "undefined"){%>
+                        <span style="color: green ; font-weight: bold;"><%=message%></span>
+                        <%}%>
+                        <%if (typeof(error) != "undefined"){%>
+                            <span style="color :red ; font-weight: bold;"><%=error%></span><br />
+                        <%}%>
                     <div class="my-5">
                         <!-- * * * * * * * * * * * * * * *-->
                         <!-- * * SB Forms Contact Form * *-->
@@ -43,36 +51,36 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="signupForm" >
+                        <form id="signupForm" method="POST" action="/login"  >
                             <div class="form-floating">
-                                <input class="form-control" id="firstName" type="text" placeholder="Enter your first name..." data-sb-validations="required" />
+                                <input class="form-control" name="firstName"id="firstName" type="text" required="required"  />
                                 <label for="firstName">First Name</label><span id="firstnameWarn"></span>
                                 
                             </div>
                             <div class="form-floating">
-                                <input class="form-control" id="lastName" type="text" placeholder="Enter your last name..." data-sb-validations="required" />
+                                <input class="form-control" name="lastName" id="lastName" type="text" required="required" />
                                 <label for="lastName">Last Name</label><span id="lastnameWarn"></span>
                                 
                             </div>
                             <div class="form-floating">
-                                <input class="form-control" id="address" type="text" placeholder="Enter your address" data-sb-validations="required,email" />
+                                <input class="form-control"name="address" id="address" type="text"required="required"  />
                                 <label for="address">Address</label><span id="addressWarn"></span>
                             </div>
                             <div class="form-floating">
-                                <input class="form-control" id="state" type="text" placeholder="Enter your state" data-sb-validations="required" />
+                                <input class="form-control" name="state" id="state" type="text"required="required"   />
                                 <label for="phone">Sate</label><span id="stateWarn"></span>
                             </div>
                             <div class="form-floating">
-                                <input class="form-control" id="city" type="text" placeholder="Enter your city" data-sb-validations="required" />
+                                <input class="form-control"name="city" id="city" type="text" required="required" />
                                 <label for="city">City</label><span id="cityWarn"></span>
                             </div>
                             <div class="form-floating">
-                                <input class="form-control" id="zip" type="number" placeholder="Enter your zip code" data-sb-validations="required" />
+                                <input class="form-control"name="zip" id="zip" type="number" required="required"  />
                                 <label for="zip">Zip Code</label><span id="zipWarn"></span>
                             </div>
                             <div class="age-Select">
                                 <label for="age">Select an age group</label><span id="ageWarn"></span>
-                                <select id="age">
+                                <select name="age" id="age" required="required">
                                     <option>1-25</option>
                                     <option>26-40</option>
                                     <option>41-65</option>
@@ -81,20 +89,21 @@
                                 </select>
                             </div>
                             <div class="gender-Select">
-                                <input  id="male" type="checkbox" />
-                                <label for="male">Male</label>
-                                
+                                <label for="gender">Select an age group</label><span id="ageWarn"></span>
+                                <select name="gender" id="gender required="required"">
+                                    <option>Male</option>
+                                    <option>Female</option>
+                                    <option>Other</option>
+                                </select>
                             </div>
-                            <div class="gender-Select">
-                                <input  id="female" type="checkbox" />
-                                <label for="female">Female</label>
+                            <div>
+                                <input type="radio" id="consent"
+                                name="consent" value="consent required="required"">
+                                <label for="consent">Please confirm signup</label>
                             </div>
-                            <div class="gender-Select">
-                                <input  id="other" type="checkbox"/>
-                                <label for="other">Other</label>
-                            </div>
+                            
                             <div class="form-floating">
-                                <textarea class="form-control" id="bio" placeholder="Enter your Bio  here..." style="height: 6rem" data-sb-validations="required"></textarea>
+                                <textarea  required="required" class="form-control" name="bio" id="bio" placeholder="Enter your Bio  here..." style="height: 6rem" data-sb-validations="required"></textarea>
                                 <label for="bio">Bio</label>
                                 <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div><span id="bioWarn"></span>
                             </div>
@@ -105,7 +114,7 @@
                             <!-- has successfully submitted-->
                             
                             <!-- Submit Button-->
-                            <button  id="submitButton" type="button">Sign up</button>
+                            <button  id="submitButton" type="submit">Send</button>
                         </form>
                     </div>
                 </div>

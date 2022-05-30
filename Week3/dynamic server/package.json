@@ -1,7 +1,7 @@
 {
-  "name": "dynamic-v1",
+  "name": "ssl-example-server",
   "version": "1.0.0",
-  "description": "first dynamic server project",
+  "description": "example server for ssl",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -11,16 +11,20 @@
     "type": "git",
     "url": "git+https://github.com/CoffeyJacob-FS/SSL.git"
   },
-  "author": "Jacob Coffey",
+  "keywords": [
+    "satic",
+    "web"
+  ],
+  "author": "Jake Coffey",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/CoffeyJacob-FS/SSL/issues"
   },
   "homepage": "https://github.com/CoffeyJacob-FS/SSL#readme",
   "dependencies": {
-    "dotenv": "^16.0.0",
-    "ejs": "^3.1.7",
-    "express": "^4.17.3"
+    "dotenv": "^16.0.1",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
